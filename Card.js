@@ -7,6 +7,8 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Divider from "@material-ui/core/Divider";
+import IconButton from '@material-ui/core/IconButton'; 
+import Icon from '@material-ui/core/Icon'; 
 
 const useStyles = makeStyles({
   root: {
@@ -39,6 +41,11 @@ export default function SimpleCard() {
   const classes = useStyles();
   return (
     <Card className={classes.card}>
+      <IconButton  style={{ position: "absolute", right: "0", background:'green', marginRight:'0.5em', marginTop:'0.1em' }}>
+        <Icon className={classes.iconHover} style={{ fontSize: 15, color:"#fff" }}>
+          edit
+        </Icon>
+      </IconButton>
       <div className={classes.root}>
         <Grid container spacing={1}>
           <Grid item xs={4} style={{ marginTop: "10px" }}>
